@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option go_package="./;user";
+package proto;
+import "google/api/annotations.proto";
+//import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/any.proto";
+service SearchService {
+  rpc Login(LoginRequest) returns (Response) {
+    option (google.api.http) = {
+      post: "/login"
+      body: "*"
+    };
+  }
+  rpc AuthNonce(AuthNonceRequest) returns (Response) {
+    option (google.api.http) = {
+      get: "/authNonce"
+    };
+  }
+}
+
+message LoginRequest{
+  string address = 1;
+  string opt =2;
+  string method =3;
+  string sign =4;
+  string code =5;
+}
+message LoginResponse{
+  int32 code=1;
+  string error =2;
+  google.protobuf.Any data= 3;
+}
+
+message Response{
+  int32 code=1;
+  string error =2;
+  google.protobuf.Any data= 3;
+}
+message AuthNonceRequest{
+  string address = 1;
+}
+message AuthNonceResponse{
+  string nonce=1;
+}
+
+
+message LoginAny {
+  int64 id = 1;
+  string username = 2;
+  string address = 3;
+  string token = 4;
+}

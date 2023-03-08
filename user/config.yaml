@@ -1,0 +1,37 @@
+name: 'block-user'
+mysql:
+  host: '192.168.2.127:3306'
+  db: 'block'
+  password: 'kr2V$D9g8yvWdYeX'
+  user: 'admin'
+port: 8087
+jwt:
+  signing-key: qmPlus
+  expires-time: 7d
+  buffer-time: 1d
+  issuer: qmPlus
+ws_url:
+  # - 'wss://rinkeby.infura.io/ws/v3/8022d14d482249ab8414d6e0811e205e'
+  # - 'wss://eth-goerli.g.alchemy.com/v2/J2syw_ugM4B3G3_UZAU5MOFkxt06knYb'
+  - 'wss://goerli.infura.io/ws/v3/8022d14d482249ab8414d6e0811e205e'
+http_url:
+#  - 'https://eth-goerli.g.alchemy.com/v2/J2syw_ugM4B3G3_UZAU5MOFkxt06knYb'
+#  - 'https://endpoints.omniatech.io/v1/eth/goerli/public'
+#  - 'https://rpc.ankr.com/eth_goerli'
+  # - 'https://eth-goerli.public.blastapi.io'
+#  - 'https://eth.getblock.io/32fe010b-4a28-4567-9242-58e17b7eea04/goerli'
+  - 'https://goerli.infura.io/v3/df3af6e2414b4c23a7b33864d17baa88'
+contract:
+  estate: '0xB3Cf6572278E62b556D30db6aa500603E2C44e55'
+  external: '0xc2aC9478F02E5c74E0069AeF71D477E27BF3D8AF'
+  membership: '0x2Bb0D0bD40832143839F617Af9D1c444fD95cbb1'
+  owner: '0xD7D771d3024A3d6C7CaEaF669048D54cD1a0C3c4'
+  usdc: '0xD7D771d3024A3d6C7CaEaF669048D54cD1a0C3c4'
+circle:
+  http_url: 'https://api-sandbox.circle.com/'
+  apikey: 'QVBJX0tFWTowM2U4NjRkZDhhODNjNmZhNDk1M2Y1NGJiOGI0YTE0NTpjZGViMTM3ZDg2OTI4NGVhZDI5MTAxM2Y0ZThkMDJkOA=='
+  wallet_id: '1011590625'
+block_private:
+  key: 'GIaEl0OTmTZ+tI8RVt5k1iPCC+Tf1Pb9gpOeuSI+xc8='
+  cipher: 'SMWz3bQ7Q1NM9I/UCY5N5yb4t3wB32A2EyaXdOsz3zogYL/6FdgqpUjpWArcc4BnpCwlwVdtwc2jgwQjZHHJng=='
+  wallet: 'E8iz3OVsTVEeq9/bCopNtDty3h8XuzvxygggecfKN9ym1g9cJBQWA1Z4yxEOoUypoQNlakDY8WltdEGGBzcZ2A=='
